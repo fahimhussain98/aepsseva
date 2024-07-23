@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red_yellow">#0754A2</color>
+    <color name="red">#D70000</color>
+    <color name="lightyellow">#F6D8B5</color>
+    <color name="lightpink">#E3DEDC</color>
+    <color name="darkredyellow">#0754A2</color>
+    <color name="gray">#454545</color>
+    <color name="green">#129718</color>
+    <color name="darkgreen">#003200</color>
+    <color name="blue">#0F2855</color>
+    <color name="bluegradient">#19D3ED</color>
+    <color name="bluedark">#3796DF</color>
+    <color name="webbluedark">#0099FF</color>
+    <color name="yellow">#FFD400</color>
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="gradientgreen">#00693E</color>
+    <color name="invisible">#00FFFFFF</color>
+    <color name="bluenew">#3BA8BE</color>
+    <color name="newred">#A70E0E</color>
+    <color name="newyellow">#D39247</color>
+    <color name="darkblue">#06317C</color>
+    <color name="pink">#BD3F69</color>
+    <color name="colorPrimary">#0F1782</color>
+    <color name="testcolornew">#076074</color>
+    <color name="lightpink_new">#F3EFEE</color>
+    <color name="bluedull">#0B1F3D</color>
+    <color name="grey">#D3D3D3</color>
+
+</resources>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/credit_debit_report_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreditDebitReportActivity">
+
+    <View
+        android:id="@+id/rechargeReportView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/gradientbackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="34dp"
+        android:layout_height="54dp"
+        android:id="@+id/back_button"
+        android:layout_marginStart="5dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/rechargeReportView"
+        app:cardCornerRadius="10dp"
+        android:elevation="50dp"
+        app:cardElevation="30dp">
+
+        <ImageView
+            android:layout_margin="4dp"
+            android:src="@drawable/arrow_left_24"
+            android:layout_gravity="center"
+            android:layout_width="34dp"
+            android:layout_height="44dp"
+            app:tint="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/activity_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reports"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/white"
+        android:gravity="end"
+        android:textSize="37sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/rechargeReportView"
+        />
+
+    <LinearLayout
+        android:id="@+id/rechargeReport_linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rechargeReportView"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/from_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border4"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="From Date"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_from_date"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+                android:gravity="center_horizontal"
+                android:text="Select Date"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/to_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/border4"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="To Date"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_to_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Select Date"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:background="@drawable/border4"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/rechargeReport_linearlayout1"
+        app:layout_constraintBottom_toTopOf="@+id/rechargeStatus_cardOkButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <ImageView
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintBottom_toBottomOf="@id/spinner"
+        app:layout_constraintTop_toTopOf="@id/spinner"
+        app:layout_constraintEnd_toEndOf="@id/spinner"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:tint="@color/black" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rechargeStatus_cardOkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:background="@drawable/borderbackground2"
+            android:drawableEnd="@drawable/ic_baseline_filter_alt_24"
+            android:drawableTint="@color/white"
+            android:textAllCaps="false"
+            android:text="  Filter"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/img_no_data_found"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/nodatafound"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rechargeStatus_cardOkButton"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/tv_no_data_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="No data found"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_no_data_found" />
+
+    <TextView
+        android:paddingHorizontal="10dp"
+        android:gravity="left"
+        android:layout_marginStart="20dp"
+        android:id="@+id/text_report_title"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="5dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:text="REPORTS"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rechargeStatus_cardOkButton"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="130dp"
+        app:layout_constraintStart_toEndOf="@+id/text_report_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/text_report_title"
+        app:layout_constraintTop_toTopOf="@+id/text_report_title"
+        android:background="@drawable/gradientbackground"
+        android:layout_marginBottom="5dp"
+        >
+    </View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/credit_debit_recycler"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_report_title"
+        app:layout_constraintVertical_bias="0.011">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

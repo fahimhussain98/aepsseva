@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.GenerateUtiPancardActivity">
+
+        <include
+            android:id="@+id/bar_container"
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/bar_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fillViewport="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/mainLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="10dp"
+                    android:visibility="visible">
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_back"
+                        android:hint="Name"
+                        android:padding="15dp"
+                        android:drawableStart="@drawable/profile"
+                        android:drawablePadding="10dp"
+                        app:drawableTint="@color/black"/>
+                    <EditText
+                        android:id="@+id/etMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_back"
+                        android:hint="Mobile No."
+                        android:padding="15dp"
+                        android:drawableStart="@drawable/ic_mobile"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="10dp"
+                        app:drawableTint="@color/black"
+                        android:maxLength="10"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_back"
+                        android:hint="EmailID"
+                        android:padding="15dp"
+                        android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="10dp"
+                        app:drawableTint="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/etShop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_back"
+                        android:hint="Shop"
+                        android:padding="15dp"
+                        android:drawableStart="@drawable/ic_shop"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="10dp"
+                        app:drawableTint="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tvState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_back"
+                        android:hint="State"
+                        android:padding="15dp"
+                        android:drawableStart="@drawable/ic_home"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="10dp"
+                        app:drawableTint="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/etPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_back"
+                        android:hint="Pincode"
+                        android:padding="15dp"
+                        android:drawableStart="@drawable/homenew3"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="10dp"
+                        app:drawableTint="@color/black"
+                        android:inputType="number"
+                        android:maxLength="6"/>
+
+                    <EditText
+                        android:id="@+id/etPanNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_back"
+                        android:hint="PAN"
+                        android:padding="15dp"
+                        android:drawableStart="@drawable/ic_card_24"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="10dp"
+                        app:drawableTint="@color/black"/>
+                    <EditText
+                        android:id="@+id/et_aadhar_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordered_back"
+                        android:hint="Aadhar"
+                        android:padding="15dp"
+                        android:drawableStart="@drawable/ic_card_24"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="10dp"
+                        app:drawableTint="@color/black"
+                        android:inputType="number"
+                        android:maxLength="12"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borderbackground2"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:text="submit"
+                        android:layout_marginTop="30dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/purchaseLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCouponType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select CouponType"
+                        android:background="@drawable/bordered_back"
+                        android:padding="10dp"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:focusable="false"/>
+                    <EditText
+                        android:id="@+id/etQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Quantity"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordered_back"
+                        android:padding="10dp"
+                        android:drawableStart="@drawable/ic_quantity"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvFees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Fee"
+                        android:background="@drawable/bordered_back"
+                        android:padding="12dp"
+                        android:layout_marginTop="10dp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnPurchaseCoupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borderbackground2"
+                        android:layout_gravity="center"
+                        android:text="Purchase Coupon"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="20dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

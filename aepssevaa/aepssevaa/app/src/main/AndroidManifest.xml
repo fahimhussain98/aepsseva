@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wts.aepssevaa">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--
+<uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.aepssevaa"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity android:name=".activities.CredoAepsKycActivity" />
+        <activity android:name=".activities.CredoOnboardActivity" />
+        <activity android:name=".activities.TwoFactorAuthenticationOnBoardBankActivity" />
+        <activity android:name=".activities.AepsTransactionActivityBankwise" />
+        <activity android:name=".activities.TwoFactorAuthenticationCWActivity" />
+        <activity android:name=".activities.PaySprintActivityBank2" />
+        <activity android:name=".activities.DthPlansActivity" />
+        <activity android:name=".activities.PlansActivity" />
+        <activity android:name=".activities.MplanActivity" />
+        <activity android:name=".activities.EkoAepsActivity" />
+        <activity android:name=".activities.TwoFactorAuthenticationActivity" />
+        <activity android:name=".activities.AepsTransactionActivity" />
+        <activity android:name=".activities.MiniStatementPaySprintActivity" />
+        <activity android:name=".activities.AdminQrCodeActivity" />
+        <activity android:name=".activities.PaysprintNewMoneyTransferActivity" />
+        <activity android:name=".activities.PaysprintAddSenderActivity" />
+        <activity android:name=".activities.PaysprintSenderValidationActivity" />
+        <activity android:name=".activities.UploadbankDocumentsActivity" />
+        <activity android:name=".activities.AddPayspintBankActivity" />
+        <activity android:name=".activities.PayspirntSettlementActivity" />
+        <activity android:name=".activities.PaySprintActivity" />
+        <activity android:name=".activities.OnBoardPaySprintActivity" />
+        <activity android:name=".activities.NewUtilityReportsActivity" />
+        <activity android:name=".activities.OtherReportsActivity" />
+        <activity android:name=".activities.NsdlPanCardActivity" />
+        <activity android:name=".activities.scannerViewshuaib" />
+        <activity android:name=".activities.QrCodeScannerActivity" />
+        <activity android:name=".activities.OfflineFundReportActivity" />
+        <activity android:name=".activities.DaybookReportActivity" />
+        <activity android:name=".activities.SellReportActivity" />
+        <activity android:name=".activities.BankDetailsActivity" />
+        <activity android:name=".activities.GenerateUtiPancardActivity" />
+        <activity android:name=".activities.MyCommissionActivity" />
+        <activity android:name=".activities.SettlementReportActivity" />
+        <activity android:name=".activities.AddBankDetailActivity" />
+        <activity android:name=".activities.SettlementActivity" />
+        <activity android:name=".activities.ElectricityActivity" />
+        <activity android:name=".activities.AepsReportActivity" />
+        <activity android:name=".activities.AddMoneyReportActivity" />
+        <activity android:name=".activities.MyWebViewActivity" />
+        <activity android:name=".activities.AddMoneyOnlineActivity" />
+        <activity android:name=".activities.WalletActivity" />
+        <activity android:name=".activities.MoneyTransferReportActivity" />
+        <activity android:name=".activities.AllReportsActivity" />
+        <activity android:name=".activities.AddSenderActivity" />
+        <activity android:name=".activities.ShareDmtReportActivity" />
+        <activity android:name=".activities.SharePayoutReportActivity" />
+        <activity android:name=".activities.ScannerViewActivity" />
+        <activity android:name=".activities.NewMoneyTransferActivity" />
+        <activity android:name=".activities.SenderValidationActivity" />
+        <activity android:name=".activities.ShareReportActivity" />
+        <activity android:name=".activities.ReportsActivity" />
+        <activity android:name=".activities.RechargeStatusActivity" />
+        <activity android:name=".activities.RechargeActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.FundTransferActivity" />
+        <activity android:name=".activities.LedgerReportActivity" />
+        <activity android:name=".activities.CreditDebitReportActivity" />
+        <activity android:name=".activities.CreditDebitBalanceActivity" />
+        <activity android:name=".activities.ViewCustomerActivity" />
+        <activity android:name=".activities.AddUserActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.Transaction_Details" />
+        <activity android:name=".activities.ForgetPasswordActivity" />
+        <activity android:name=".activities.SignUpActivity" />
+        <activity android:name=".activities.HomeDashboardActivity" />
+        <activity
+            android:name="com.wts.aepssevaa.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
